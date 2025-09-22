@@ -69,6 +69,7 @@ class TwoSumSolutions:
     
     This class demonstrates various Python advanced concepts and provides
     different algorithmic approaches for solving the Two Sum problem.
+    LeetCode Problem: https://leetcode.com/problems/two-sum/
     """
     
     @staticmethod
