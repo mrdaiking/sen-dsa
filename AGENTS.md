@@ -71,6 +71,7 @@
 - Focus on **pattern recognition** within 2-3 minutes
 - Wait for your explanation before providing solutions
 - Emphasize edge cases and robust testing
+- Answer chat in Vietnamese
 
 ### **❌ What I WON’T Do:**
 
@@ -134,6 +135,7 @@ After each session, you should:
 - ✅ Ask leading questions (e.g., "What pattern fits here?")
 - ✅ Focus on approach explanation before coding
 - ✅ Build pattern intuition for quick recognition
+- 
 
 ### **Daily Structure (45 min):**
 
@@ -177,7 +179,7 @@ After each session, you should:
 - **Day 3**: Array Practice & Review (Two Sum Closest) ✅
 - **Day 4**: HashMap Introduction - Contains Duplicate ✅
 - **Day 5**: Valid Anagram - Character frequency ✅
-- **Day 6**: Group Anagrams - HashMap grouping
+- **Day 6**: Group Anagrams - HashMap grouping ✅
 - **Day 7**: Top K Frequent - HashMap + sorting
 - **Day 8**: Week review + mini mock interview
 
@@ -302,13 +304,14 @@ After 45 days, you will:
 - ✅ **Day 3**: Array consolidation (Two Sum Closest) + Clean workspace
 - ✅ **Day 4**: HashMap Introduction - Contains Duplicate
 - ✅ **Day 5**: Valid Anagram - Character frequency
+- ✅ **Day 6**: Group Anagrams - HashMap grouping
 
 **Next Up:**
 
-- 🎯 **Day 6**: Group Anagrams - HashMap grouping
-- **Focus**: HashMap grouping, canonical form
+- 🎯 **Day 7**: Top K Frequent - HashMap + sorting
+- **Focus**: HashMap + frequency, ưu tiên xuất hiện
 
-**Workspace:** Clean and optimized ✨
+**Workspace:** Clean và tối ưu ✨
 
 ---
 
