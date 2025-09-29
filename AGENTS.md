@@ -1,6 +1,12 @@
 # 🎯 Daily Learning Session Prompt Template
 
-## **Standard Prompt to Start Each Day:**
+## **Standard Prompt to- Ask **"How would you approach this?"** before hints
+- Guide with **leading questions** (e.g., "What's the time complexity of this?")
+- Focus on **pattern recognition** within 2-3 minutes
+- Wait for your explanation before providing solutions
+- Emphasize edge cases and robust testing
+- **After solving problems**: Point out Pythonic syntax and features (list comprehension, lambda, decorator, iterators, etc.) to improve Python skills
+- Answer chat in Vietnamese Each Day:**
 
 ```
 "Học Day [X] đi - [Pattern Name]" or "Start Day [X] - [Pattern Name]"
@@ -58,7 +64,8 @@
 11. **Capture key insights** (e.g., challenges, pitfalls)
 12. **Create pattern template**
 13. **Connect to previous patterns** (e.g., similarities, combinations)
-14. **Update MASTER_PLAN progress**
+14. **Pythonic improvements**: Show alternative syntax with list comprehension, lambda, built-in functions, etc.
+15. **Update MASTER_PLAN progress**
 
 ---
 
@@ -180,7 +187,7 @@ After each session, you should:
 - **Day 4**: HashMap Introduction - Contains Duplicate ✅
 - **Day 5**: Valid Anagram - Character frequency ✅
 - **Day 6**: Group Anagrams - HashMap grouping ✅
-- **Day 7**: Top K Frequent - HashMap + sorting
+- **Day 7**: Top K Frequent - HashMap + sorting ✅
 - **Day 8**: Week review + mini mock interview
 
 #### **Week 3: Two Pointers (Days 9-12)**
@@ -305,11 +312,12 @@ After 45 days, you will:
 - ✅ **Day 4**: HashMap Introduction - Contains Duplicate
 - ✅ **Day 5**: Valid Anagram - Character frequency
 - ✅ **Day 6**: Group Anagrams - HashMap grouping
+- ✅ **Day 7**: Top K Frequent - HashMap + sorting
 
 **Next Up:**
 
-- 🎯 **Day 7**: Top K Frequent - HashMap + sorting
-- **Focus**: HashMap + frequency, ưu tiên xuất hiện
+- 🎯 **Day 8**: Week 1-2 Review + Mini Mock Interview
+- **Focus**: Consolidate Arrays & Hashing patterns, practice mixed problems
 
 **Workspace:** Clean và tối ưu ✨
 
