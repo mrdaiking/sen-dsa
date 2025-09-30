@@ -238,6 +238,7 @@ After each session, you should:
 - **Day 37-39**: Mixed pattern practice
 - **Day 40-45**: Final mock interviews + mastery assessment
 
+
 ---
 
 ## 🎯 Success Metrics
@@ -322,5 +323,19 @@ After 45 days, you will:
 **Workspace:** Clean và tối ưu ✨
 
 ---
+## 📌 Advance topics
 
+After completed the fundamentals, we'll extend these following topics:
+- Heaps (Priority Queue)
+- Tries
+- Graphs (DFS/BFS nâng cao, Connected Components, Shortest Path)
+- Bit Manipulation
+- Intervals (Merge Intervals, Meeting Rooms, v.v.)
+- Prefix Sum (Subarray Sum, Range Query)
+- Greedy (Jump Game, Interval Scheduling)
+- Advanced Sort and Search (Quickselect, Binary Search trên answer)
+
+Các chủ đề này sẽ được học sau khi bạn đã vững các pattern nền tảng Arrays, HashMap, Two Pointers, Binary Search, Linked List, Stack/Queue, Tree, DP.
+
+---
 **This is your single source of truth! All other files can be archived.** 🎯
