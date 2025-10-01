@@ -188,11 +188,11 @@ After each session, you should:
 - **Day 5**: Valid Anagram - Character frequency ✅
 - **Day 6**: Group Anagrams - HashMap grouping ✅
 - **Day 7**: Top K Frequent - HashMap + sorting ✅
-- **Day 8**: Week review + mini mock interview
+- **Day 8**: Week review + mini mock interview ✅
 
 #### **Week 3: Two Pointers (Days 9-12)**
 
-- **Day 9**: Valid Palindrome - Basic two pointers
+- **Day 9**: Valid Palindrome - Basic two pointers ✅
 - **Day 10**: Two Sum II - Sorted array optimization
 - **Day 11**: 3Sum - Fix + two pointers
 - **Day 12**: Week review
