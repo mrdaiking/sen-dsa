@@ -193,8 +193,8 @@ After each session, you should:
 #### **Week 3: Two Pointers (Days 9-12)**
 
 - **Day 9**: Valid Palindrome - Basic two pointers ✅
-- **Day 10**: Two Sum II - Sorted array optimization
-- **Day 11**: 3Sum - Fix + two pointers
+- **Day 10**: Two Sum II - Sorted array optimization✅
+- **Day 11**: 3Sum - Fix + two pointers✅
 - **Day 12**: Week review
 
 #### **Week 4: Binary Search (Days 13-16)**
