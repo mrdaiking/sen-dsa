@@ -53,7 +53,7 @@ def is_palindrome_v2(s):
     Space: O(1)
     """
     left, right = 0, len(s) - 1
-    while left < right and s[left].isalnum() and s[right].isalnum():
+    while left < right:
         while left < right and not s[left].isalnum():
             left += 1
         while left < right and not s[right].isalnum():
@@ -81,4 +81,4 @@ if __name__ == "__main__":
     # test_cases = ["madam"]
     for s in test_cases:
         print(f"Input: '{s}'")
-        print(f"Output: {is_palindrome(s)}\n")
+        print(f"Output: {is_palindrome_v2(s)}\n")
