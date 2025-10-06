@@ -15,7 +15,7 @@
 - Brute force: duyệt từng phần tử, O(n)
 - Binary search: cắt đôi mảng, so sánh target với nums[mid]
     - Nếu target == nums[mid]: return mid
-    - Nếu target < nums[mid]: tìm bên trái
+    - Nếu target < nums[mid]: *tìm* bên trái
     - Nếu target > nums[mid]: tìm bên phải
 - Khi left > right, left chính là vị trí cần chèn target
 
