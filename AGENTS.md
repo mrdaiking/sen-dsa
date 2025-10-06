@@ -199,8 +199,8 @@ After each session, you should:
 
 #### **Week 4: Binary Search (Days 13-16)**
 
-- **Day 13**: Binary Search - Template mastery
-- **Day 14**: Search Insert Position
+- **Day 13**: Binary Search - Template mastery ✅
+- **Day 14**: Search Insert Position ✅
 - **Day 15**: Search Rotated Sorted Array
 - **Day 16**: Week review + mock interview
 
