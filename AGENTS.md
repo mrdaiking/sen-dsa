@@ -201,7 +201,7 @@ After each session, you should:
 
 - **Day 13**: Binary Search - Template mastery ✅
 - **Day 14**: Search Insert Position ✅
-- **Day 15**: Search Rotated Sorted Array
+- **Day 15**: Search Rotated Sorted Array ✅
 - **Day 16**: Week review + mock interview
 
 #### **Week 5: Sliding Window (Days 17-20)**
