@@ -204,10 +204,11 @@ After each session, you should:
 - **Day 15**: Search Rotated Sorted Array ✅
 - **Day 16**: Week review + mock interview ✅
 
+
 #### **Week 5: Sliding Window (Days 17-20)**
 
 - **Day 17**: Best Time Buy/Sell Stock ✅
-- **Day 18**: Longest Substring Without Repeating
+- **Day 18**: Longest Substring Without Repeating ✅
 - **Day 19**: Longest Repeating Character Replacement
 - **Day 20**: Week review
 
