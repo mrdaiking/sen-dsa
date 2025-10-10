@@ -209,7 +209,7 @@ After each session, you should:
 
 - **Day 17**: Best Time Buy/Sell Stock ✅
 - **Day 18**: Longest Substring Without Repeating ✅
-- **Day 19**: Longest Repeating Character Replacement
+- **Day 19**: Longest Repeating Character Replacement ✅
 - **Day 20**: Week review
 
 #### **Week 6: Linked List (Days 21-24)**
