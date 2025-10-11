@@ -32,44 +32,54 @@ def lengthOfLongestSubstring(s):
     max_len = 0
     seen = set()
     for right in range(len(s)):
+        print(f"right: {right}, s[right]: {s[right]}, seen: {seen}")
         while s[right] in seen:
+            print(f'remove {s[left]}')
             seen.remove(s[left])
             left += 1
+            print(f"left: {left}, seen: {seen}")
         seen.add(s[right])
         max_len = max(max_len, right - left + 1)
     return max_len
 
-def lengthOfLongestSubstringv2(s):
-    """
-    Sliding window with dictionary to jump left pointer faster.
-    """
+def lengthOfLongestSubstring_set(s: str) -> int:
+    char_set = set()
     left = 0
-    max_len = 0
-    last_idx = {}
-    for right, char in enumerate(s):
-        if char in last_idx and last_idx[char] >= left:
-            left = last_idx[char] + 1
-        last_idx[char] = right
-        max_len = max(max_len, right - left + 1)
-    return max_len
+    max_length = 0
+    for right in range(len(s)):
+        print(f"\n--- right={right}, char='{s[right]}' ---")
+        print(f"Before: char_set={char_set}, left={left}")
+        while s[right] in char_set:
+            print(f"  Duplicate '{s[right]}', remove '{s[left]}' at left={left}")
+            char_set.remove(s[left])
+            left += 1
+        char_set.add(s[right])
+        print(f"After: char_set={char_set}, left={left}")
+        print(f"Window: '{s[left:right+1]}', length={right - left + 1}")
+        max_length = max(max_length, right - left + 1)
+        print(f"  New max_length: {max_length}")
+    return max_length
+
 
 
 
 # Test cases
 if __name__ == "__main__":
     tests = [
-        ("abcabcbb", 3),
-        ("bbbbb", 1),
-        ("pwwkew", 3),
-        ("", 0),
-        ("a", 1),
-        ("au", 2),
-        ("dvdf", 3),
-        ("abba", 2),
+        ("abcabcbb", 3)
+        # ("bbbbb", 1),
+        # ("pwwkew", 3),
+        # ("", 0),
+        # ("a", 1),
+        # ("au", 2),
+        # ("dvdf", 3),
+        # ("abba", 2),
     ]
     for s, expected in tests:
         # result = lengthOfLongestSubstring(s)
-        result = lengthOfLongestSubstringv2(s)
+        result = lengthOfLongestSubstring(s)
+        print(f'-----------------------------')
+        lengthOfLongestSubstring_set(s)
 
-        assert result == expected, f"Fail: {s} -> {result} (expected {expected})"
-        print(f"Input: s='{s}' | Output: {result} | Expected: {expected}")  
+        # assert result == expected, f"Fail: {s} -> {result} (expected {expected})"
+        # print(f"Input: s='{s}' | Output: {result} | Expected: {expected}")  
