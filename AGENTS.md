@@ -142,10 +142,20 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 
 ## 🗓️ WEEK 6: Linked List (Days 21–24)
 
-- [ ] **Day 21:** Reverse Linked List  
+- [x] **Day 21:** Reverse Linked List  
 - [ ] **Day 22:** Merge Two Sorted Lists  
 - [ ] **Day 23:** Linked List Cycle  
 - [ ] **Day 24:** Reorder List  
+
+## 🗓️ WEEK 6.5: Recursion Deep Dive (Day 24.5)
+
+- [ ] **Day 24.5:** Recursion Mastery Session  
+  - Recursion fundamentals, call stack tracing
+  - Classic recursion problems: factorial, Fibonacci, reverse linked list (recursive), tree traversals
+  - Tail recursion vs. normal recursion
+  - When to use recursion vs. iteration
+  - Debugging and visualizing recursion
+  - Practice: implement 2–3 recursion-based problems
 
 ## 🗓️ WEEK 7: Stack & Queue (Days 25–28)
 
