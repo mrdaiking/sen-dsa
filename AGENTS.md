@@ -142,7 +142,10 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 
 ## 🗓️ WEEK 6: Linked List (Days 21–24)
 
- - [x] **Day 22:** Merge Two Sorted Lists ✅
+- [x] **Day 21:** Reverse Linked List ✅  
+- [x] **Day 22:** Merge Two Sorted Lists ✅  
+- [ ] **Day 23:** Linked List Cycle  
+- [ ] **Day 24:** Reorder List  
 
 ## 🗓️ WEEK 6.5: Recursion Deep Dive (Day 24.5)
 
