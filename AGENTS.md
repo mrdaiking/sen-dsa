@@ -149,7 +149,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 
 ## 🗓️ WEEK 6.5: Recursion Deep Dive (Day 24.5)
 
-- [ ] **Day 24.5:** Recursion Mastery Session  
+- [x] **Day 24.5:** Recursion Mastery Session  
   - Recursion fundamentals, call stack tracing
   - Classic recursion problems: factorial, Fibonacci, reverse linked list (recursive), tree traversals
   - Tail recursion vs. normal recursion
