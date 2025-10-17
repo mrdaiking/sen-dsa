@@ -156,6 +156,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
   - When to use recursion vs. iteration
   - Debugging and visualizing recursion
   - Practice: implement 2–3 recursion-based problems
+  - [ ] ** Week Review + Mock Interview**
 
 ## 🗓️ WEEK 7: Stack & Queue (Days 25–28)
 
@@ -163,6 +164,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [ ] **Day 26:** Min Stack  
 - [ ] **Day 27:** Evaluate RPN  
 - [ ] **Day 28:** Daily Temperatures  
+- [ ] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 8: Trees (Days 29–32)
 
@@ -170,6 +172,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [ ] **Day 30:** Same Tree / Invert Tree  
 - [ ] **Day 31:** Binary Tree Level Order Traversal  
 - [ ] **Day 32:** Diameter of Binary Tree  
+- [ ] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 9: Dynamic Programming (Days 33–36)
 
@@ -177,6 +180,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [ ] **Day 34:** House Robber  
 - [ ] **Day 35:** Min Cost Climbing Stairs  
 - [ ] **Day 36:** Coin Change 
+- [ ] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 10: Graphs & Heaps (Days 37–40)
 
@@ -184,6 +188,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [ ] **Day 38:** Course Schedule (Topological Sort)  
 - [ ] **Day 39:** Kth Largest Element in Array  
 - [ ] **Day 40:** Network Delay Time (Dijkstra)  
+- [ ] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 11: Greedy, Interval & Prefix Sum (Days 41–45)
 
@@ -192,6 +197,9 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [ ] **Day 43:** Jump Game  
 - [ ] **Day 44:** Subarray Sum Equals K  
 - [ ] **Day 45:** Final Mock Interview (2 Medium + 1 Hard)  
+
+## 🗓️ WEEK 12: Review 45 days course
+- [ ] **Day 46–50:** Comprehensive review of all patterns + mixed problem sets
 
 ---
 
