@@ -33,10 +33,10 @@ def hasCycle(head: ListNode):
     """
     slow = fast = head
     while fast and fast.next:
-        if slow == fast:
-            return True
         slow = slow.next
         fast = fast.next.next
+        if slow == fast:
+            return True
     return False
 
 # Helper to create linked list with cycle for testing
@@ -54,7 +54,7 @@ def create_linked_list_with_cycle(arr, pos):
 if __name__ == "__main__":
     tests = [
         ([3,2,0,-4], 1, True),
-        ([1,2], 0, True),
+        ([1,2], -1, False),
         ([1], -1, False),
         ([1,2,3,4,5], -1, False),
         ([1,2,3,4,5], 2, True),
