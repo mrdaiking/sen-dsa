@@ -156,12 +156,12 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
   - When to use recursion vs. iteration
   - Debugging and visualizing recursion
   - Practice: implement 2–3 recursion-based problems
-  - [ ] ** Week Review + Mock Interview**
+  - [x] ** Week Review + Mock Interview**
 
 ## 🗓️ WEEK 7: Stack & Queue (Days 25–28)
 
-- [ ] **Day 25:** Valid Parentheses  
-- [ ] **Day 26:** Min Stack  
+- [x] **Day 25:** Valid Parentheses  
+- [x] **Day 26:** Min Stack  
 - [ ] **Day 27:** Evaluate RPN  
 - [ ] **Day 28:** Daily Temperatures  
 - [ ] **Week Review + Mock Interview**
