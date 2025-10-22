@@ -51,9 +51,11 @@ def load_review_log():
             for line in f:
                 date_str, file_path = line.strip().split(',')
                 date = datetime.datetime.strptime(date_str, '%Y-%m-%d').date()
-                if file_path not in log:
-                    log[file_path] = []
-                log[file_path].append(date)
+                # Normalize path without suffix
+                normalized_path = str(pathlib.Path(file_path).with_suffix(''))
+                if normalized_path not in log:
+                    log[normalized_path] = []
+                log[normalized_path].append(date)
         # Sort dates
         for path in log:
             log[path].sort()
@@ -61,10 +63,14 @@ def load_review_log():
 
 def get_last_review_and_missed(file_path, log, today):
     """Get last review date and days missed."""
-    if file_path in log and log[file_path]:
-        last_review = log[file_path][-1]
-        days_missed = (today - last_review).days
-        return last_review, days_missed
+    # Check both with and without suffix
+    paths_to_check = [file_path, pathlib.Path(file_path).with_suffix('')]
+    for path in paths_to_check:
+        path_str = str(path)
+        if path_str in log and log[path_str]:
+            last_review = log[path_str][-1]
+            days_missed = (today - last_review).days
+            return last_review, days_missed
     return None, None
 
 def list_due_with_stats():
@@ -168,11 +174,30 @@ def main():
     parser.add_argument('--add-all', action='store_true', help="Add meta for all .py files without meta")
     parser.add_argument('--log', metavar='FILE', help="Log review for algorithm")
     parser.add_argument('--ics', action='store_true', help="Generate .ics for due reviews")
+    parser.add_argument('--sort-by', choices=['name', 'day', 'last_review', 'days_missed', 'difficulty'], default='day', help="Sort due list by field (default: day)")
 
     args = parser.parse_args()
 
     if args.due:
         due_list = list_due_with_stats()
+        # Sort
+        if args.sort_by == 'name':
+            due_list.sort(key=lambda x: x['name'])
+        elif args.sort_by == 'day':
+            due_list.sort(key=lambda x: x['day'])
+        elif args.sort_by == 'last_review':
+            due_list.sort(key=lambda x: x['last_review'] or datetime.date.min)
+        elif args.sort_by == 'days_missed':
+            due_list.sort(key=lambda x: (x['days_missed'] is None, -(x['days_missed'] or 0)))
+        elif args.sort_by == 'difficulty':
+            # Need to load difficulty from meta
+            for item in due_list:
+                meta_file = pathlib.Path(item['path']).with_suffix(META_EXT)
+                if meta_file.exists():
+                    meta = load_meta(meta_file)
+                    item['difficulty'] = meta.get('difficulty', 5)
+            due_list.sort(key=lambda x: x['difficulty'])
+        
         if not due_list:
             print("No reviews due today!")
         else:
