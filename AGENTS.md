@@ -366,3 +366,10 @@ Start Applied Algorithms Phase - Consistent Hashing
 Once loaded into CodePilot or Copilot Chat, it enables you to train like a **FAANG-level engineer** —
 from **algorithmic foundations** to **system design mastery**.
 
+## 📊 **Quick Command Reference**
+| Feature          | Lệnh                                      |
+| ------------------ | ----------------------------------------- |
+| List all due  | `python review_scheduler.py --due`        |
+| Add new algorithm  | `python review_scheduler.py --add <path>` |
+| Log review         | `python review_scheduler.py --log <path>` |
+| Export `.ics`      | `python review_scheduler.py --calendar`   |
