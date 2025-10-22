@@ -162,7 +162,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 
 - [x] **Day 25:** Valid Parentheses  
 - [x] **Day 26:** Min Stack  
-- [ ] **Day 27:** Evaluate RPN  
+- [x] **Day 27:** Evaluate RPN  
 - [ ] **Day 28:** Daily Temperatures  
 - [ ] **Week Review + Mock Interview**
 

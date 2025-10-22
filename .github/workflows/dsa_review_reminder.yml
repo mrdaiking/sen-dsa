@@ -1,0 +1,50 @@
+name: DSA Review Reminder
+
+on:
+  schedule:
+    - cron: "0 9 * * *"  # Chạy mỗi sáng 9:00 UTC
+  workflow_dispatch:  # Cho phép chạy manual
+
+jobs:
+  check_review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+      
+      - name: Run review scheduler
+        run: |
+          python review_scheduler.py --due > due_reviews.txt
+      
+      - name: Check if reviews are due
+        id: check_due
+        run: |
+          if [ -s due_reviews.txt ]; then
+            echo "due=true" >> $GITHUB_OUTPUT
+            echo "Reviews due today!" > message.txt
+            cat due_reviews.txt >> message.txt
+          else
+            echo "due=false" >> $GITHUB_OUTPUT
+            echo "No reviews due today." > message.txt
+          fi
+      
+      - name: Send email if due
+        if: steps.check_due.outputs.due == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT || 587 }}
+          username: ${{ secrets.SMTP_USER }}
+          password: ${{ secrets.SMTP_PASS }}
+          subject: "DSA Review Reminder - ${{ github.repository }}"
+          body: file://message.txt
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.SMTP_USER }}
