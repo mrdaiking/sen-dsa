@@ -163,7 +163,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [x] **Day 25:** Valid Parentheses  
 - [x] **Day 26:** Min Stack  
 - [x] **Day 27:** Evaluate RPN  
-- [ ] **Day 28:** Daily Temperatures  
+- [x] **Day 28:** Daily Temperatures  
 - [ ] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 8: Trees (Days 29–32)

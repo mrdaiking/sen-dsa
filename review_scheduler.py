@@ -73,28 +73,27 @@ def get_last_review_and_missed(file_path, log, today):
             return last_review, days_missed
     return None, None
 
-def list_due_with_stats():
-    """List due with last review and missed days."""
+def list_all_with_stats():
+    """List all algorithms with stats."""
     today = datetime.date.today()
     meta_files = find_meta_files()
     log = load_review_log()
-    due_list = []
+    all_list = []
     for meta_file in meta_files:
         try:
             meta = load_meta(meta_file)
-            if is_due(meta, today):
-                algo_path = str(meta_file).replace(META_EXT, '')
-                last_review, days_missed = get_last_review_and_missed(algo_path, log, today)
-                due_list.append({
-                    'name': meta['name'],
-                    'path': algo_path,
-                    'day': (today - datetime.datetime.strptime(meta['learned_at'], '%Y-%m-%d').date()).days,
-                    'last_review': last_review,
-                    'days_missed': days_missed
-                })
+            algo_path = str(meta_file).replace(META_EXT, '')
+            last_review, days_missed = get_last_review_and_missed(algo_path, log, today)
+            all_list.append({
+                'name': meta['name'],
+                'path': algo_path,
+                'day': (today - datetime.datetime.strptime(meta['learned_at'], '%Y-%m-%d').date()).days,
+                'last_review': last_review,
+                'days_missed': days_missed
+            })
         except Exception as e:
             print(f"Error loading {meta_file}: {e}")
-    return due_list
+    return all_list
 
 def add_meta(file_path):
     """Interactively create .meta.yaml for a new algorithm."""
@@ -128,6 +127,77 @@ def log_review(py_file):
     with open(LOG_FILE, 'a') as f:
         f.write(f"{today},{py_file}\n")
     print(f"Logged review for {py_file}")
+    
+    # Auto-update confidence based on review count
+    auto_update_confidence(py_file)
+
+def auto_update_confidence(file_path):
+    """Auto-update confidence based on review history and consistency."""
+    log = load_review_log()
+    normalized_path = str(pathlib.Path(file_path).with_suffix(''))
+    reviews = log.get(normalized_path, [])
+    review_count = len(reviews)
+    
+    # Load meta for learned_at and intervals
+    meta_file = pathlib.Path(file_path).with_suffix(META_EXT)
+    if not meta_file.exists():
+        return
+    
+    meta = load_meta(meta_file)
+    learned_at = datetime.datetime.strptime(meta['learned_at'], '%Y-%m-%d').date()
+    intervals = meta.get('review_intervals', [1, 3, 7, 14, 30])
+    today = datetime.date.today()
+    
+    # Calculate expected reviews: how many intervals have passed
+    expected_reviews = 0
+    for days in intervals:
+        review_date = learned_at + datetime.timedelta(days=days)
+        if review_date <= today:
+            expected_reviews += 1
+    
+    # Confidence based on review consistency
+    if expected_reviews == 0:
+        new_confidence = 5
+    else:
+        consistency_ratio = review_count / expected_reviews
+        if consistency_ratio >= 1.0:
+            new_confidence = min(10, 5 + int(review_count * 0.5))  # Bonus for extra reviews
+        elif consistency_ratio >= 0.8:
+            new_confidence = 5 + int(review_count * 0.8)
+        elif consistency_ratio >= 0.5:
+            new_confidence = max(1, 5 + review_count - 2)
+        else:
+            new_confidence = max(1, 5 - (expected_reviews - review_count))  # Penalty for missing
+    
+    # Update if changed
+    if meta.get('confidence', 5) != new_confidence:
+        meta['confidence'] = new_confidence
+        with open(meta_file, 'w') as f:
+            yaml.dump(meta, f)
+        print(f"Auto-updated confidence to {new_confidence} (reviews: {review_count}/{expected_reviews})")
+
+def update_confidence(file_path):
+    """Update confidence for an algorithm."""
+    meta_file = pathlib.Path(file_path).with_suffix(META_EXT)
+    if not meta_file.exists():
+        print(f"Meta file not found: {meta_file}")
+        return
+    
+    meta = load_meta(meta_file)
+    current_confidence = meta.get('confidence', 5)
+    print(f"Current confidence for {meta['name']}: {current_confidence}")
+    
+    try:
+        new_confidence = int(input("New confidence (1-10): "))
+        if 1 <= new_confidence <= 10:
+            meta['confidence'] = new_confidence
+            with open(meta_file, 'w') as f:
+                yaml.dump(meta, f)
+            print(f"Updated confidence to {new_confidence}")
+        else:
+            print("Confidence must be 1-10")
+    except ValueError:
+        print("Invalid input")
 
 def generate_ics(due_list, output_file='reviews.ics'):
     """Generate a simple .ics file for due reviews."""
@@ -173,13 +243,15 @@ def main():
     parser.add_argument('--add', metavar='FILE', help="Add new algorithm meta")
     parser.add_argument('--add-all', action='store_true', help="Add meta for all .py files without meta")
     parser.add_argument('--log', metavar='FILE', help="Log review for algorithm")
+    parser.add_argument('--update-confidence', metavar='FILE', help="Update confidence for an algorithm")
     parser.add_argument('--ics', action='store_true', help="Generate .ics for due reviews")
-    parser.add_argument('--sort-by', choices=['name', 'day', 'last_review', 'days_missed', 'difficulty'], default='day', help="Sort due list by field (default: day)")
+    parser.add_argument('--sort-by', choices=['name', 'day', 'last_review', 'days_missed', 'difficulty', 'confidence'], default='day', help="Sort due list by field (default: day)")
+    parser.add_argument('--all', action='store_true', help="List all algorithms, not just due")
 
     args = parser.parse_args()
 
-    if args.due:
-        due_list = list_due_with_stats()
+    if args.due or args.all:
+        due_list = list_due_with_stats() if not args.all else list_all_with_stats()
         # Sort
         if args.sort_by == 'name':
             due_list.sort(key=lambda x: x['name'])
@@ -197,15 +269,24 @@ def main():
                     meta = load_meta(meta_file)
                     item['difficulty'] = meta.get('difficulty', 5)
             due_list.sort(key=lambda x: x['difficulty'])
+        elif args.sort_by == 'confidence':
+            # Load confidence from meta
+            for item in due_list:
+                meta_file = pathlib.Path(item['path']).with_suffix(META_EXT)
+                if meta_file.exists():
+                    meta = load_meta(meta_file)
+                    item['confidence'] = meta.get('confidence', 5)
+            due_list.sort(key=lambda x: x['confidence'], reverse=True)  # Highest confidence first
         
         if not due_list:
-            print("No reviews due today!")
+            print("No algorithms found!")
         else:
-            print("Due for review today:")
+            list_type = "All algorithms" if args.all else "Due for review today"
+            print(f"{list_type}:")
             for item in due_list:
                 last_str = f"Last reviewed: {item['last_review']} ({item['days_missed']} days ago)" if item['last_review'] else "Never reviewed"
-                print(f"- {item['name']} ({item['path']}) - Day {item['day']} - {last_str}")
-        if args.ics:
+                print(f"- {item['name']} ({item['path']}) - Day {item['day']} - Confidence: {item.get('confidence', 5)} - {last_str}")
+        if args.ics and not args.all:
             generate_ics(due_list)
 
     elif args.add:
@@ -216,6 +297,9 @@ def main():
 
     elif args.log:
         log_review(args.log)
+
+    elif args.update_confidence:
+        update_confidence(args.update_confidence)
 
     else:
         parser.print_help()
