@@ -164,7 +164,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [x] **Day 26:** Min Stack  
 - [x] **Day 27:** Evaluate RPN  
 - [x] **Day 28:** Daily Temperatures  
-- [ ] **Week Review + Mock Interview**
+- [x] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 8: Trees (Days 29–32)
 
@@ -367,9 +367,9 @@ Once loaded into CodePilot or Copilot Chat, it enables you to train like a **FAA
 from **algorithmic foundations** to **system design mastery**.
 
 ## 📊 **Quick Command Reference**
-| Feature          | Lệnh                                      |
+| Feature            | Command                                   |
 | ------------------ | ----------------------------------------- |
-| List all due  | `python review_scheduler.py --due`        |
+| List all due       | `python review_scheduler.py --due`        |
 | Add new algorithm  | `python review_scheduler.py --add <path>` |
 | Log review         | `python review_scheduler.py --log <path>` |
 | Export `.ics`      | `python review_scheduler.py --calendar`   |

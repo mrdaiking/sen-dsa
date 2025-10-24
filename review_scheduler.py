@@ -95,6 +95,29 @@ def list_all_with_stats():
             print(f"Error loading {meta_file}: {e}")
     return all_list
 
+def list_due_with_stats():
+    """List due algorithms with stats."""
+    today = datetime.date.today()
+    meta_files = find_meta_files()
+    log = load_review_log()
+    due_list = []
+    for meta_file in meta_files:
+        try:
+            meta = load_meta(meta_file)
+            if is_due(meta, today):
+                algo_path = str(meta_file).replace(META_EXT, '')
+                last_review, days_missed = get_last_review_and_missed(algo_path, log, today)
+                due_list.append({
+                    'name': meta['name'],
+                    'path': algo_path,
+                    'day': (today - datetime.datetime.strptime(meta['learned_at'], '%Y-%m-%d').date()).days,
+                    'last_review': last_review,
+                    'days_missed': days_missed
+                })
+        except Exception as e:
+            print(f"Error loading {meta_file}: {e}")
+    return due_list
+
 def add_meta(file_path):
     """Interactively create .meta.yaml for a new algorithm."""
     meta_file = pathlib.Path(file_path).with_suffix(META_EXT)
