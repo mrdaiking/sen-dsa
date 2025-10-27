@@ -168,7 +168,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 
 ## 🗓️ WEEK 8: Trees (Days 29–32)
 
-- [ ] **Day 29:** Maximum Depth Binary Tree  
+- [x] **Day 29:** Maximum Depth Binary Tree  
 - [ ] **Day 30:** Same Tree / Invert Tree  
 - [ ] **Day 31:** Binary Tree Level Order Traversal  
 - [ ] **Day 32:** Diameter of Binary Tree  
