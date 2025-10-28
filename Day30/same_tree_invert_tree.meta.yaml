@@ -1,0 +1,20 @@
+algorithm: "Same Tree / Invert Tree"
+day: 30
+week: 8
+pattern: "Tree Recursion"
+difficulty: "Easy"
+topics:
+  - "Tree"
+  - "Recursion"
+  - "Simultaneous Recursion"
+  - "Post-order Traversal"
+  - "Tree Modification"
+complexity:
+  time: "O(n)"
+  space: "O(h)"
+status: "completed"
+confidence: 4
+notes: "Mastered simultaneous recursion for comparison and post-order modification for tree inversion."
+review_count: 1
+last_reviewed: "2025-10-28"
+next_review: "2025-11-04"
