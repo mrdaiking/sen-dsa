@@ -170,7 +170,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 
 - [x] **Day 29:** Maximum Depth Binary Tree  
 - [x] **Day 30:** Same Tree / Invert Tree  
-- [ ] **Day 31:** Binary Tree Level Order Traversal  
+- [x] **Day 31:** Binary Tree Level Order Traversal  
 - [ ] **Day 32:** Diameter of Binary Tree  
 - [ ] **Week Review + Mock Interview**
 

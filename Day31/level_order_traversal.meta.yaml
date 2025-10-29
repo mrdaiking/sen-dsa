@@ -1,0 +1,21 @@
+algorithm: Binary Tree Level Order Traversal
+complexity:
+  space: O(w)
+  time: O(n)
+confidence: 5
+day: 31
+difficulty: Medium
+last_reviewed: '2025-10-29'
+learned_at: '2025-10-29'
+next_review: '2025-11-05'
+notes: 'Mastered BFS with queue for level-by-level tree traversal. Key insight: track
+  level size before processing.'
+pattern: Tree BFS
+review_count: 1
+status: completed
+topics:
+- Tree
+- BFS
+- Queue
+- Level Order Traversal
+week: 8
