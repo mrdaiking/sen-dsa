@@ -17,11 +17,11 @@ if __name__ == "__main__":
     solution = Solution()
 
     # Test case 1: Empty tree
-    print("Test 1 - Empty tree:", solution.maxDepth(None))  # Expected: 0
+    # print("Test 1 - Empty tree:", solution.maxDepth(None))  # Expected: 0
 
     # Test case 2: Single node
-    root1 = TreeNode(1)
-    print("Test 2 - Single node:", solution.maxDepth(root1))  # Expected: 1
+    # root1 = TreeNode(1)
+    # print("Test 2 - Single node:", solution.maxDepth(root1))  # Expected: 1
 
     # Test case 3: Balanced tree
     #     3
@@ -31,10 +31,6 @@ if __name__ == "__main__":
     #    15   7
     root2 = TreeNode(3)
     root2.left = TreeNode(9)
-    root2.right = TreeNode(20)
-    root2.right.left = TreeNode(15)
-    root2.right.right = TreeNode(7)
-    print("Test 3 - Balanced tree:", solution.maxDepth(root2))  # Expected: 3
     root2.right = TreeNode(20)
     root2.right.left = TreeNode(15)
     root2.right.right = TreeNode(7)
