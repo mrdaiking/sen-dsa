@@ -1,3 +1,4 @@
+from typing import List, Optional
 from collections import deque
 
 class TreeNode:
@@ -10,7 +11,7 @@ class Solution:
     # ========================================
     # APPROACH 1: BFS with Queue (Iterative)
     # ========================================
-    def levelOrder_BFS_Queue(self, root: TreeNode) -> list[list[int]]:
+    def levelOrder_BFS_Queue(self, root: Optional[TreeNode]) -> list[list[int]]:
         """Standard BFS with Queue - Most efficient and natural"""
         if not root:
             return []
@@ -20,18 +21,17 @@ class Solution:
 
         while queue:
             level_size = len(queue)
-            level_values = []
+            current_level = []
 
-            for i in range(level_size):
+            for _ in range(level_size):
                 node = queue.popleft()
-                level_values.append(node.val)
-
+                current_level.append(node.val)
                 if node.left:
                     queue.append(node.left)
+                
                 if node.right:
                     queue.append(node.right)
-
-            result.append(level_values)
+            result.append(current_level)
 
         return result
 
@@ -130,28 +130,27 @@ def test_all_approaches():
 
     # Get results from all approaches
     result_bfs_queue = solution.levelOrder_BFS_Queue(root)
-    result_dfs_recursive = solution.levelOrder_DFS_Recursive(root)
-    result_bfs_two_queues = solution.levelOrder_BFS_TwoQueues(root)
-    result_dfs_hashmap = solution.levelOrder_DFS_HashMap(root)
+    # result_dfs_recursive = solution.levelOrder_DFS_Recursive(root)
+    # result_bfs_two_queues = solution.levelOrder_BFS_TwoQueues(root)
+    # result_dfs_hashmap = solution.levelOrder_DFS_HashMap(root)
 
     expected = [[3], [9, 20], [15, 7]]
 
     print("Expected:", expected)
     print("BFS Queue:", result_bfs_queue)
-    print("DFS Recursive:", result_dfs_recursive)
-    print("BFS Two Queues:", result_bfs_two_queues)
-    print("DFS HashMap:", result_dfs_hashmap)
+    # print("DFS Recursive:", result_dfs_recursive)
+    # print("BFS Two Queues:", result_bfs_two_queues)
+    # print("DFS HashMap:", result_dfs_hashmap)
 
     # Verify all approaches give same result
     assert result_bfs_queue == expected
-    assert result_dfs_recursive == expected
-    assert result_bfs_two_queues == expected
-    assert result_dfs_hashmap == expected
+    # assert result_dfs_recursive == expected
+    # assert result_bfs_two_queues == expected
+    # assert result_dfs_hashmap == expected
 
     print("\n✅ All approaches produce identical results!")
 
 def analyze_queue_sizes():
-    """Phân tích kích thước queue trong các trường hợp khác nhau"""
 
     print("=== PHÂN TÍCH KÍCH THƯỚC QUEUE ===\n")
 

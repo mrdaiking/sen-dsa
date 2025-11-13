@@ -2,7 +2,7 @@ algorithm: Binary Tree Level Order Traversal
 complexity:
   space: O(w)
   time: O(n)
-confidence: 5
+confidence: 7
 day: 31
 difficulty: Medium
 last_reviewed: '2025-10-29'
