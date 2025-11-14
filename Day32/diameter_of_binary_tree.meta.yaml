@@ -1,0 +1,22 @@
+algorithm: Diameter of Binary Tree
+complexity:
+  space: O(h)
+  time: O(n)
+confidence: 5
+day: 32
+difficulty: Medium
+last_reviewed: '2025-11-14'
+learned_at: '2025-11-14'
+next_review: '2025-11-21'
+notes: 'Mastered diameter calculation using DFS with global max tracking. Key insight:
+  track three cases per node and return height.'
+pattern: Tree Recursion + Global Max
+review_count: 1
+status: completed
+topics:
+- Tree
+- DFS
+- Recursion
+- Post-order Traversal
+- Global State Tracking
+week: 8

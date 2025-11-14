@@ -24,13 +24,13 @@ class Solution:
             current_level = []
 
             for _ in range(level_size):
-                node = queue.popleft()
+                node = queue.popleft() # FIFO
                 current_level.append(node.val)
                 if node.left:
-                    queue.append(node.left)
+                    queue.append(node.left) # Append if left exist
                 
                 if node.right:
-                    queue.append(node.right)
+                    queue.append(node.right) # Append if right exist
             result.append(current_level)
 
         return result
