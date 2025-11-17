@@ -1,0 +1,22 @@
+algorithm: Climbing Stairs
+complexity:
+  space: O(1) optimized
+  time: O(n)
+confidence: 5
+day: 33
+difficulty: Easy
+last_reviewed: '2025-11-17'
+learned_at: '2025-11-17'
+next_review: '2025-11-24'
+notes: 'Mastered DP transition for overlapping subproblems. Implemented 4 approaches:
+  bottom-up, top-down, optimized, and pure recursion.'
+pattern: Dynamic Programming
+review_count: 1
+status: completed
+topics:
+- DP
+- Bottom-up Tabulation
+- Top-down Memoization
+- Fibonacci Sequence
+- Space Optimization
+week: 9

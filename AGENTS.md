@@ -172,11 +172,11 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [x] **Day 30:** Same Tree / Invert Tree  
 - [x] **Day 31:** Binary Tree Level Order Traversal  
 - [x] **Day 32:** Diameter of Binary Tree  
-- [ ] **Week Review + Mock Interview**
+- [x] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 9: Dynamic Programming (Days 33–36)
 
-- [ ] **Day 33:** Climbing Stairs  
+- [x] **Day 33:** Climbing Stairs  
 - [ ] **Day 34:** House Robber  
 - [ ] **Day 35:** Min Cost Climbing Stairs  
 - [ ] **Day 36:** Coin Change 
