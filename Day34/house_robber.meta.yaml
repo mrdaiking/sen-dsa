@@ -1,0 +1,25 @@
+pattern: "House Robber"
+category: "Dynamic Programming"
+difficulty: "Medium"
+confidence: 5
+learned_at: "2025-11-18"
+approaches:
+  - "Bottom-up DP with array"
+  - "Space-optimized DP (O(1))"
+  - "Top-down DP with memoization"
+time_complexity: "O(n)"
+space_complexity: "O(1) optimized, O(n) others"
+key_insights:
+  - "DP state: max money from first i houses"
+  - "Transition: max(skip current, take current + dp[i-2])"
+  - "Constraint prevents adjacent selection"
+  - "Space optimization by tracking only prev two values"
+edge_cases:
+  - "Empty array: 0"
+  - "Single house: house value"
+  - "Two houses: max of both"
+  - "All zeros: 0"
+connections:
+  - "Climbing Stairs (Fibonacci without constraints)"
+  - "Min Cost Climbing Stairs (similar transition)"
+  - "Jump Game (constraint-based decisions)"
