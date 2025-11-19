@@ -1,0 +1,25 @@
+pattern: "Min Cost Climbing Stairs"
+category: "Dynamic Programming"
+difficulty: "Easy"
+confidence: 5
+learned_at: "2025-11-19"
+approaches:
+  - "Bottom-up DP with array"
+  - "Space-optimized DP (O(1))"
+  - "Top-down DP with memoization"
+time_complexity: "O(n)"
+space_complexity: "O(1) optimized, O(n) others"
+key_insights:
+  - "DP state: min cost to reach step i"
+  - "Transition: cost[i] + min(dp[i-1], dp[i-2])"
+  - "Can start from step 0 or 1"
+  - "Can reach top from either n-1 or n-2"
+edge_cases:
+  - "Empty array: 0"
+  - "Single step: 0"
+  - "Two steps: min of both"
+  - "All zeros: 0"
+connections:
+  - "Climbing Stairs (count ways instead of min cost)"
+  - "House Robber (maximize instead of minimize)"
+  - "Frog Jump (similar jump mechanics)"

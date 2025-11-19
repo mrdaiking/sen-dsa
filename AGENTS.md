@@ -177,8 +177,8 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 ## 🗓️ WEEK 9: Dynamic Programming (Days 33–36)
 
 - [x] **Day 33:** Climbing Stairs  
-- [ ] **Day 34:** House Robber  
-- [ ] **Day 35:** Min Cost Climbing Stairs  
+- [x] **Day 34:** House Robber  
+- [x] **Day 35:** Min Cost Climbing Stairs  
 - [ ] **Day 36:** Coin Change 
 - [ ] **Week Review + Mock Interview**
 
