@@ -179,7 +179,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [x] **Day 33:** Climbing Stairs  
 - [x] **Day 34:** House Robber  
 - [x] **Day 35:** Min Cost Climbing Stairs  
-- [ ] **Day 36:** Coin Change 
+- [x] **Day 36:** Coin Change 
 - [ ] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 10: Graphs & Heaps (Days 37–40)

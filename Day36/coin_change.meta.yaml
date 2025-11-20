@@ -1,0 +1,25 @@
+pattern: "Coin Change"
+category: "Dynamic Programming"
+difficulty: "Medium"
+confidence: 5
+learned_at: "2025-11-20"
+approaches:
+  - "Bottom-up DP with array"
+  - "Space-optimized DP"
+  - "Top-down DP with memoization"
+time_complexity: "O(coins * amount)"
+space_complexity: "O(amount)"
+key_insights:
+  - "DP state: min coins to make amount i"
+  - "Transition: dp[i] = min over coins of (dp[i - coin] + 1)"
+  - "Unbounded knapsack: can use same coin multiple times"
+  - "Base case: dp[0] = 0, impossible amounts = -1"
+edge_cases:
+  - "Amount 0: 0 coins"
+  - "No coins: -1 (unless amount=0)"
+  - "Impossible amounts: -1"
+  - "Single coin type: amount // coin_value"
+connections:
+  - "Min Cost Climbing Stairs (similar DP transition)"
+  - "House Robber (constraint-based DP)"
+  - "Word Break (similar unbounded pattern)"
