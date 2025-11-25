@@ -180,11 +180,11 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [x] **Day 34:** House Robber  
 - [x] **Day 35:** Min Cost Climbing Stairs  
 - [x] **Day 36:** Coin Change 
-- [ ] **Week Review + Mock Interview**
+- [x] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 10: Graphs & Heaps (Days 37–40)
 
-- [ ] **Day 37:** Number of Islands  
+- [x] **Day 37:** Number of Islands  
 - [ ] **Day 38:** Course Schedule (Topological Sort)  
 - [ ] **Day 39:** Kth Largest Element in Array  
 - [ ] **Day 40:** Network Delay Time (Dijkstra)  

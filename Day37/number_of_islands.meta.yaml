@@ -1,0 +1,25 @@
+pattern: "Graph Traversal - Connected Components"
+difficulty: "Medium"
+time_complexity: "O(m×n)"
+space_complexity: "O(m×n)"
+key_concepts:
+  - "2D Grid as Graph"
+  - "DFS/BFS Traversal"
+  - "Connected Components"
+  - "In-place Modification"
+  - "Boundary Checking"
+approaches:
+  - "DFS Recursive"
+  - "BFS Iterative"
+  - "Union-Find (Advanced)"
+edge_cases:
+  - "Empty grid"
+  - "No islands (all water)"
+  - "Single cell island"
+  - "All land (one big island)"
+  - "Islands at grid boundaries"
+interview_tips:
+  - "Grid problems often use 4-directional movement"
+  - "Mark visited cells to avoid recounting"
+  - "Check boundaries before accessing neighbors"
+  - "Consider both recursive and iterative solutions"
