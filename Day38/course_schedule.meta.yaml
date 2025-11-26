@@ -1,0 +1,26 @@
+pattern: "Graph - Cycle Detection & Topological Sort"
+difficulty: "Medium"
+time_complexity: "O(V + E)"
+space_complexity: "O(V)"
+key_concepts:
+  - "Directed Acyclic Graph (DAG)"
+  - "Cycle Detection (3-state DFS)"
+  - "Topological Sort"
+  - "Adjacency List"
+  - "Graph States: Unvisited, Visiting, Visited"
+approaches:
+  - "DFS with 3 states (Recommended)"
+  - "BFS - Kahn's Algorithm"
+  - "Union-Find (Less optimal)"
+edge_cases:
+  - "No prerequisites"
+  - "Self-loop cycle"
+  - "Circular dependencies"
+  - "Disconnected components"
+  - "Single course"
+interview_tips:
+  - "Recognize dependency/prerequisite → graph problem"
+  - "Cycle detection is key skill"
+  - "3-state DFS pattern: unvisited, visiting, visited"
+  - "Build adjacency list for sparse graphs"
+  - "Pay attention to edge direction: [a,b] means b→a"
