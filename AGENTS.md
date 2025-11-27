@@ -185,8 +185,8 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 ## 🗓️ WEEK 10: Graphs & Heaps (Days 37–40)
 
 - [x] **Day 37:** Number of Islands  
-- [ ] **Day 38:** Course Schedule (Topological Sort)  
-- [ ] **Day 39:** Kth Largest Element in Array  
+- [x] **Day 38:** Course Schedule (Topological Sort)  
+- [x] **Day 39:** Kth Largest Element in Array  
 - [ ] **Day 40:** Network Delay Time (Dijkstra)  
 - [ ] **Week Review + Mock Interview**
 

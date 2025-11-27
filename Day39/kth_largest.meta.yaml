@@ -1,0 +1,24 @@
+pattern: "Heap / Quickselect"
+difficulty: "Medium"
+time_complexity: "O(n log k) (heap), O(n) avg (quickselect)"
+space_complexity: "O(k) (heap), O(1) (quickselect)"
+key_concepts:
+  - "Min-Heap (Priority Queue)"
+  - "Quickselect (Partition)"
+  - "Sorting"
+  - "Top-K Pattern"
+approaches:
+  - "Min-Heap (Recommended for large n, small k)"
+  - "Quickselect (Fastest for static array)"
+  - "Sorting (Simple, not optimal)"
+edge_cases:
+  - "k = 1 (max element)"
+  - "k = len(nums) (min element)"
+  - "Duplicates"
+  - "Negative numbers"
+  - "Large arrays"
+interview_tips:
+  - "Heap is best for streaming/online data"
+  - "Quickselect is fastest for static arrays"
+  - "Sorting is simplest, but not optimal for big data"
+  - "Know Python's heapq module"
