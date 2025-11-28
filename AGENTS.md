@@ -187,7 +187,7 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [x] **Day 37:** Number of Islands  
 - [x] **Day 38:** Course Schedule (Topological Sort)  
 - [x] **Day 39:** Kth Largest Element in Array  
-- [ ] **Day 40:** Network Delay Time (Dijkstra)  
+- [x] **Day 40:** Network Delay Time (Dijkstra)  
 - [ ] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 11: Greedy, Interval & Prefix Sum (Days 41–45)

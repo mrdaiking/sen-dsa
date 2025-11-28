@@ -1,0 +1,24 @@
+pattern: "Dijkstra's Algorithm (Min-Heap)"
+difficulty: "Medium"
+time_complexity: "O(E log V)"
+space_complexity: "O(V + E)"
+key_concepts:
+  - "Weighted Directed Graph"
+  - "Shortest Path from Source"
+  - "Priority Queue (Min-Heap)"
+  - "Visited Set"
+approaches:
+  - "Dijkstra's Algorithm (Recommended)"
+  - "Bellman-Ford (for negative weights, not needed here)"
+  - "BFS (only for unweighted graphs)"
+edge_cases:
+  - "Disconnected nodes"
+  - "Multiple edges between same nodes"
+  - "Self-loops"
+  - "Large graphs"
+interview_tips:
+  - "Always expand node with min distance (Dijkstra)"
+  - "Use heapq for priority queue"
+  - "Track visited nodes to avoid cycles"
+  - "Return max distance among all reachable nodes"
+  - "If any node unreachable, return -1"
