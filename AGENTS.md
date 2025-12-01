@@ -192,7 +192,11 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 
 ## 🗓️ WEEK 11: Greedy, Interval & Prefix Sum (Days 41–45)
 
- [x] **Day 41:** Merge Intervals  
+- [x] **Day 41:** Merge Intervals  
+- [ ] **Day 42:** Insert Interval  
+- [ ] **Day 43:** Jump Game  
+- [ ] **Day 44:** Subarray Sum Equals K  
+- [ ] **Day 45:** Final Mock Interview (2 Medium + 1 Hard)  
 
 ## 🗓️ WEEK 12: Review 45 days course
 - [ ] **Day 46–50:** Comprehensive review of all patterns + mixed problem sets
