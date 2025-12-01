@@ -188,15 +188,11 @@ Teach through **guided reasoning**, **pattern recognition**, and **hands-on prob
 - [x] **Day 38:** Course Schedule (Topological Sort)  
 - [x] **Day 39:** Kth Largest Element in Array  
 - [x] **Day 40:** Network Delay Time (Dijkstra)  
-- [ ] **Week Review + Mock Interview**
+- [x] **Week Review + Mock Interview**
 
 ## 🗓️ WEEK 11: Greedy, Interval & Prefix Sum (Days 41–45)
 
-- [ ] **Day 41:** Merge Intervals  
-- [ ] **Day 42:** Insert Interval  
-- [ ] **Day 43:** Jump Game  
-- [ ] **Day 44:** Subarray Sum Equals K  
-- [ ] **Day 45:** Final Mock Interview (2 Medium + 1 Hard)  
+ [x] **Day 41:** Merge Intervals  
 
 ## 🗓️ WEEK 12: Review 45 days course
 - [ ] **Day 46–50:** Comprehensive review of all patterns + mixed problem sets

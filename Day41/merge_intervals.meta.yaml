@@ -1,0 +1,19 @@
+pattern: "Sort + Merge Intervals"
+difficulty: "Medium"
+time_complexity: "O(n log n)"
+space_complexity: "O(n)"
+key_concepts:
+  - "Sort intervals by start"
+  - "Compare end points"
+  - "Merge overlapping intervals"
+approaches:
+  - "Sort, then merge in one pass"
+edge_cases:
+  - "No overlap"
+  - "Full overlap"
+  - "Same start/end"
+  - "Interval contains all others"
+interview_tips:
+  - "Always sort before merging"
+  - "One pass after sort is enough"
+  - "Common in scheduling, booking, etc."
