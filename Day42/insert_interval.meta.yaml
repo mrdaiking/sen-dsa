@@ -1,0 +1,19 @@
+pattern: "Insert + Merge Interval"
+difficulty: "Medium"
+time_complexity: "O(n)"
+space_complexity: "O(n)"
+key_concepts:
+  - "Non-overlapping sorted intervals"
+  - "Insert new interval"
+  - "Merge overlapping intervals"
+approaches:
+  - "Linear scan, merge on overlap"
+edge_cases:
+  - "newInterval outside all intervals"
+  - "newInterval overlaps multiple intervals"
+  - "intervals empty"
+  - "newInterval does not overlap"
+interview_tips:
+  - "No need to sort again"
+  - "Merge only with newInterval"
+  - "Use list for result, insert at correct position"
