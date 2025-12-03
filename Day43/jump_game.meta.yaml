@@ -1,0 +1,22 @@
+pattern: "Greedy"
+difficulty: "Medium"
+time_complexity: "O(n)"
+space_complexity: "O(1)"
+key_concepts:
+  - "Greedy approach"
+  - "Track max reachable position"
+  - "Early termination"
+approaches:
+  - "Greedy (Recommended)"
+  - "Dynamic Programming (Overkill)"
+  - "Backtracking (Too slow)"
+edge_cases:
+  - "Already at last index"
+  - "Stuck at first position (value = 0)"
+  - "Large jumps overshooting"
+  - "Multiple zeros"
+interview_tips:
+  - "Greedy is optimal"
+  - "Don't need actual path"
+  - "Update max_reach at each step"
+  - "Early termination possible"
