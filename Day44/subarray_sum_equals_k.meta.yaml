@@ -1,0 +1,19 @@
+pattern: "Prefix Sum + HashMap"
+difficulty: "Medium"
+time_complexity: "O(n)"
+space_complexity: "O(n)"
+key_concepts:
+  - "Prefix sum"
+  - "HashMap for counts"
+  - "Subarray sum"
+approaches:
+  - "Prefix sum + HashMap (Recommended)"
+edge_cases:
+  - "Negative numbers"
+  - "k = 0"
+  - "All zeros"
+  - "Longest/shortest subarray"
+interview_tips:
+  - "Prefix sum for fast subarray sum"
+  - "HashMap for quick lookup"
+  - "Avoid O(n^2) brute force"
